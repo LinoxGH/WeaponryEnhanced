@@ -4,4 +4,4 @@ main: me.linoxgh.weaponryenhanced.WeaponryEnhanced
 api-version: 1.17
 softdepend: [ Slimefun ]
 authors: [ LinoxGH ]
-description: Adds new and unique weapons, armors and blocks with special effects.
+description: Adds new and unique weapons and armors with special effects.

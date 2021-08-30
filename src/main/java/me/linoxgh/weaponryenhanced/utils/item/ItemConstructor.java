@@ -1,4 +1,4 @@
-package me.linoxgh.weaponryenhanced.utils;
+package me.linoxgh.weaponryenhanced.utils.item;
 
 import java.util.Arrays;
 

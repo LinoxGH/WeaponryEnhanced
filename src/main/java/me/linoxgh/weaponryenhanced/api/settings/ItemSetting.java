@@ -1,4 +1,4 @@
-package me.linoxgh.weaponryenhanced.utils.config;
+package me.linoxgh.weaponryenhanced.api.settings;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -26,4 +26,6 @@ public abstract class ItemSetting<T> {
     public void setValue(@NotNull T VALUE) {
         this.value = VALUE;
     }
+
+    public abstract boolean isApplicable(@NotNull Object val);
 }

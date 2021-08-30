@@ -1,6 +1,5 @@
-package me.linoxgh.weaponryenhanced.utils.config.settings;
+package me.linoxgh.weaponryenhanced.api.settings;
 
-import me.linoxgh.weaponryenhanced.utils.config.ItemSetting;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 
