@@ -1,4 +1,4 @@
-name: SlimeWeaponry
+name: WeaponryEnhanced
 version: '${project.version}'
 main: me.linoxgh.weaponryenhanced.WeaponryEnhanced
 api-version: 1.17

@@ -10,10 +10,6 @@ public class EnumSetting<T extends Enum<T>> extends ItemSetting<T> {
         this.enumClass = enumClass;
     }
 
-    public @NotNull Class<T> getEnumClass() {
-        return enumClass;
-    }
-
     private @NotNull T[] getAllowedValues() {
         return enumClass.getEnumConstants();
     }
@@ -25,5 +21,19 @@ public class EnumSetting<T extends Enum<T>> extends ItemSetting<T> {
             if (allowedValue.name().equals(val)) return true;
         }
         return false;
+    }
+
+    public void setValue(@NotNull String val) {
+        for (T constant : enumClass.getEnumConstants()) {
+            if (constant.name().equals(val)) super.setValue(constant);
+        }
+    }
+
+    public @NotNull String getValueName() {
+        return super.getValue().name();
+    }
+
+    public @NotNull String getDefaultValueName() {
+        return super.getDefaultValue().name();
     }
 }

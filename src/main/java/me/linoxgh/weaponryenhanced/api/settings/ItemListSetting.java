@@ -10,4 +10,14 @@ public class ItemListSetting extends ItemSetting<List<ItemStack>> {
     public ItemListSetting(@NotNull String key, @NotNull List<ItemStack> def) {
         super(key, def);
     }
+
+    @Override
+    public boolean isApplicable(@NotNull Object val) {
+        int check = 0;
+        if (!(val instanceof List)) return false;
+        for (Object entry : (List<?>) val) {
+            if (entry instanceof ItemStack) check++;
+        }
+        return check == ((List<?>) val).size();
+    }
 }

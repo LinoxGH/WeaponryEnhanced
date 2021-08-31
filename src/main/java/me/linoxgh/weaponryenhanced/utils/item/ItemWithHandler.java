@@ -7,10 +7,10 @@ import java.util.Set;
 
 import me.linoxgh.weaponryenhanced.api.handlers.ItemHandler;
 import me.linoxgh.weaponryenhanced.api.recipes.RecipeType;
-import me.linoxgh.weaponryenhanced.api.settings.EnumSetting;
-import me.linoxgh.weaponryenhanced.api.settings.ItemSetting;
 import me.linoxgh.weaponryenhanced.api.settings.BooleanSetting;
+import me.linoxgh.weaponryenhanced.api.settings.EnumSetting;
 import me.linoxgh.weaponryenhanced.api.settings.ItemListSetting;
+import me.linoxgh.weaponryenhanced.api.settings.ItemSetting;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -50,7 +50,7 @@ public abstract class ItemWithHandler<T extends ItemHandler> {
         return recipeEnabled.getValue();
     }
     public @NotNull RecipeType getRecipeType() {
-        return recipeType.getValue();
+        return RecipeType.valueOf(recipeType.getValueName());
     }
     public @Nullable List<ItemStack> getRecipe() {
         return isRecipeEnabled() ? recipe.getValue() : null;
@@ -68,6 +68,5 @@ public abstract class ItemWithHandler<T extends ItemHandler> {
 
     public abstract @NotNull ItemStack getModelItem();
     public abstract @NotNull ItemStack getItem();
-
     public abstract @NotNull String getId();
 }
